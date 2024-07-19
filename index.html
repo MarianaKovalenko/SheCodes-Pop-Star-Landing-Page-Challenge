@@ -205,7 +205,7 @@
         </div>
         
         <button id="switch" onclick="toggleTheme()">ON AIR</button>
-        <audio id="theme-sound" src="./src/shum.mp3" type="audio/mp3"></audio>
+        <audio id="theme-sound" src="src/shum.mp3" type="audio/mp3"></audio>
         
         <br/>
         <iframe id="fullscreen" width="560" height="315" src="https://www.youtube.com/embed/ulZ-r7W301M" 
@@ -320,7 +320,8 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/851/origina
         function toggleTheme () { 
             if ( localStorage.getItem ("theme") === "theme-light") { 
                 
-                setTheme ("theme-dark");
+                setTheme ("theme-dark"); 
+                playSound();
               
             } else { 
                 setTheme ("theme-light"); 
